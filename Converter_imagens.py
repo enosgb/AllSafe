@@ -19,7 +19,7 @@ def main():
         sg.popup_cancel('Cancelled - No valid folder entered')
         return
     try:
-        namesonly = [f for f in os.listdir(folder) if f.sendswith('.png') or f.endswith('.ico') or f.endswith('.gif')]
+        namesonly = [f for f in os.listdir(folder) if f.endswith('.png') or f.endswith('.ico') or f.endswith('.gif')]
     except:
         sg.popup_cancel('Cancelled - No valid folder entered')
         return
