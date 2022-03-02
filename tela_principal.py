@@ -25,6 +25,7 @@ def main():
         if event == sg.WIN_CLOSED:
             break
         if event == 'Tarefas':
+            #open janela
             tela_tarefas()
     window.close()
 
