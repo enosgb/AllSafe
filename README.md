@@ -3,5 +3,5 @@ This is an Antivirus - TCC Enos Gabriel
 
 
 Adicionar tela de suporte!!!!!
-limpar registro
-limpezade disco
+limpador de registros
+limpeza de disco
