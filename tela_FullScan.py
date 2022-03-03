@@ -1,1 +1,1 @@
-###criando tela de fullscan
+###criando tela de ''fullscan''
