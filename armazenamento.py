@@ -10,7 +10,7 @@ import sys
 """
 
 ALPHA = 0.7
-THEME = 'black'
+THEME = 'BlueMono'
 UPDATE_FREQUENCY_MILLISECONDS = 20 * 1000
 
 BAR_COLORS = ('#23a0a0', '#56d856', '#be45be', '#5681d8', '#d34545', '#BE7C29')
