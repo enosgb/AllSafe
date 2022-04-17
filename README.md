@@ -4,6 +4,9 @@ This is an Antivirus - TCC Enos Gabriel
 # Link API
 https://github.com/Cloudmersive/Cloudmersive.APIClient.Python.Virus
 
+#Install API
+pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+
 
 Adicionar tela de suporte!!!!!
 limpador de registros
