@@ -3,7 +3,7 @@ from img_tags import *
 from armazenamento import *
 from tela_tarefas import tela_tarefas
 
-
+'''mac dependencies'''
 def main():
     sg.theme('BlueMono')
     layout = [[sg.Button('', image_data=shield, button_color=('light blue', sg.theme_background_color()),
