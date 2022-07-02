@@ -2,6 +2,8 @@ from cgitb import text
 from doctest import BLANKLINE_MARKER
 from turtle import width
 import PySimpleGUI as sg
+from armazenamento import armazenamento
+from cpu import cpu
 from img_tags import *
 
 ###função com janela de tarefas
@@ -26,8 +28,8 @@ def tela_tarefas():
         if event == sg.WIN_CLOSED:
            break
         if event == 'Verificar Espaço':
-            print('ok')
+            armazenamento()
         if event == 'process':
-            print('processador')
+            cpu()
     window.close()
 

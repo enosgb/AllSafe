@@ -35,7 +35,7 @@ def update_window(window):
             pass
 
 
-def main(location):
+def armazenamento():
     sg.theme(THEME)
 
     # ----------------  Create Layout  ----------------
@@ -59,7 +59,7 @@ def main(location):
     layout += [[sg.Text('Refresh', font='Any 8', key='-REFRESH-', enable_events=True), sg.Text('❎', enable_events=True, key='Exit Text')]]
 
     # ----------------  Create Window  ----------------
-    window = sg.Window('Drive Status Widget', layout, location=location, keep_on_top=True, grab_anywhere=True, no_titlebar=True, alpha_channel=ALPHA, use_default_focus=False,
+    window = sg.Window('Drive Status Widget', layout, keep_on_top=True, grab_anywhere=True, no_titlebar=True, alpha_channel=ALPHA, use_default_focus=False,
                        finalize=True)
 
     update_window(window)  # sets the progress bars
@@ -71,11 +71,12 @@ def main(location):
             break
         update_window(window)
 
-
+'''
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         location = sys.argv[1].split(',')
         location = (int(location[0]), int(location[1]))
     else:
         location = (None, None)
-    main(location)
+    armazenamento(location)
+'''

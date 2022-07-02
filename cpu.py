@@ -265,7 +265,7 @@ def human_size(bytes, units=(' bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB')):
     """ Returns a human readable string reprentation of bytes"""
     return str(bytes) + ' ' + units[0] if bytes < 1024 else human_size(bytes >> 10, units[1:])
 
-def main(location):
+def cpu():
     sg.theme(THEME)
     gsize = (100, 55)
     layout = [
@@ -274,7 +274,7 @@ def main(location):
         [sg.T(size=(5, 1), font='Any 20', justification='c', background_color='black', k='-gauge VALUE-')]]
 
 
-    window = sg.Window('CPU Usage Widget Square', layout, location=location, no_titlebar=True, grab_anywhere=True, margins=(0, 0), element_padding=(0, 0), alpha_channel=ALPHA, background_color='black', element_justification='c', finalize=True, right_click_menu=sg.MENU_RIGHT_CLICK_EDITME_EXIT, enable_close_attempted_event=True)
+    window = sg.Window('CPU Usage Widget Square', layout, no_titlebar=True, grab_anywhere=True, margins=(0, 0), element_padding=(0, 0), alpha_channel=ALPHA, background_color='black', element_justification='c', finalize=True, right_click_menu=sg.MENU_RIGHT_CLICK_EDITME_EXIT, enable_close_attempted_event=True)
 
     gauge = Gauge(pointer_color=sg.theme_text_color(), clock_color=sg.theme_text_color(), major_tick_color=sg.theme_text_color(),
                   minor_tick_color=sg.theme_input_background_color(), pointer_outer_color=sg.theme_text_color(), major_tick_start_radius=45,
@@ -301,6 +301,7 @@ def main(location):
     window.close()
 
 
+'''
 if __name__ == '__main__':
 
     if len(sys.argv) > 1:
@@ -309,3 +310,4 @@ if __name__ == '__main__':
     else:
         location = sg.user_settings_get_entry('-location-', (None, None))
     main(location)
+'''
