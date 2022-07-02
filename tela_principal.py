@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 from img_tags import *
 from armazenamento import *
 from tela_tarefas import tela_tarefas
+from tela_select_arquivos import select_arquivos
 
 
 def main():
@@ -20,7 +21,7 @@ def main():
                [sg.Button('Tarefas', image_data=image_large_rectangle, font='Helvetica 12 bold italic',
                           button_color=('light blue', sg.theme_background_color()), border_width=0, ),
                 sg.Button('Configurações', image_data=image_large_rectangle, font='Helvetica 12 bold italic',
-                          button_color=('light blue', sg.theme_background_color()),border_width=0, ), ],
+                          button_color=('light blue', sg.theme_background_color()), border_width=0, ), ],
                ]
 
     window = sg.Window('AllSafe Antivirus', layout)
@@ -32,6 +33,9 @@ def main():
         if event == 'Tarefas':
             # open janela
             tela_tarefas()
+        if event == 'Selecionar Arquivo':
+            #open janela
+            select_arquivos();
     window.close()
 
 
