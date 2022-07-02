@@ -1,5 +1,6 @@
 # AllSafe
 This is an Antivirus - TCC Enos Gabriel
+
 compativel com WINDOWS, LINUX & MacOS
 
 # Link API
