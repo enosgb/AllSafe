@@ -1,10 +1,7 @@
-from tkinter import _Padding
 import PySimpleGUI as sg
 from img_tags import *
 from armazenamento import *
 from tela_tarefas import tela_tarefas
-
-'''mac dependencies'''
 
 
 def main():
@@ -24,7 +21,6 @@ def main():
                           button_color=('light blue', sg.theme_background_color()), border_width=0, ),
                 sg.Button('Configurações', image_data=image_large_rectangle, font='Helvetica 12 bold italic',
                           button_color=('light blue', sg.theme_background_color()),border_width=0, ), ],
-
                ]
 
     window = sg.Window('AllSafe Antivirus', layout)
