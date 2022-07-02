@@ -13,6 +13,7 @@ def make_window(theme):
         [
             sg.Button(image_data=image_grey1, button_color=('black', sg.theme_background_color()), border_width=0),
             sg.Button(image_data=image_grey2, button_color=('black', sg.theme_background_color()), border_width=0),
+            
         ],
         [
             sg.Button('I Like', image_data=image_grey1, font='Helvetica 12 bold italic', button_color=('black', sg.theme_background_color()), border_width=0, ),
