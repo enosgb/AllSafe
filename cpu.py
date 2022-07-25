@@ -269,7 +269,7 @@ def cpu():
     sg.theme(THEME)
     gsize = (100, 55)
     layout = [
-        [sg.T('CPU', font='Any 20', background_color='black')],
+        [sg.T('❎',enable_events=True,key='Exit'),sg.T('CPU', font='Any 20', background_color='black')],
         [sg.Graph(gsize, (-gsize[0] // 2, 0), (gsize[0] // 2, gsize[1]), key='-Graph-')],
         [sg.T(size=(5, 1), font='Any 20', justification='c', background_color='black', k='-gauge VALUE-')]]
 
@@ -284,7 +284,6 @@ def cpu():
 
     while True:  # Event Loop
         cpu_percent = psutil.cpu_percent(interval=1)
-
         if gauge.change():
             new_angle = cpu_percent*180/100
             window['-gauge VALUE-'].update(f'{int(cpu_percent)}%')
@@ -293,6 +292,8 @@ def cpu():
         # ----------- update the graphics and text in the window ------------
         # update the window, wait for a while, then check for exit
         event, values = window.read(timeout=UPDATE_FREQUENCY_MILLISECONDS)
+        if event == 'Exit':
+            break
         if event in (sg.WIN_CLOSE_ATTEMPTED_EVENT, 'Exit'):
             sg.user_settings_set_entry('-location-', window.current_location())  # The line of code to save the position before exiting
             break

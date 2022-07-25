@@ -70,7 +70,7 @@ def armazenamento():
         if event == sg.WIN_CLOSED or event.startswith('Exit'):
             break
         update_window(window)
-
+    window.close();
 '''
 if __name__ == '__main__':
     if len(sys.argv) > 1:
