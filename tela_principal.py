@@ -8,9 +8,9 @@ from tela_select_arquivos import select_arquivos
 def main():
     sg.theme('BlueMono')
     layout = [[sg.Button('', image_data=shield,
-                         button_color=('light blue', sg.theme_background_color()), border_width=0, disabled=True),
+                         button_color=('light blue', sg.theme_background_color()), border_width=0),
                sg.Button('', image_data=UNIFESO,
-                         button_color=('light blue', sg.theme_background_color()), border_width=0, disabled=True)]]
+                         button_color=('light blue', sg.theme_background_color()), border_width=0)]]
 
     layout += [[sg.Text('Full Scan               ', font='Helvetica 16 bold italic', text_color='white'),
                 sg.Button(' Iniciar Verificação', image_data=image_large_rectangle, font='Helvetica 12 bold italic',
