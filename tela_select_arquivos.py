@@ -16,7 +16,7 @@ def convert_file_to_base64(filename):
     print(filename);
 
 def select_arquivos():
-    filename = sg.popup_get_file('Selecione um arquivo para Verificação', title='Base64 Encoder')
+    filename = sg.popup_get_file('Selecione um arquivo para Verificação', title='selecione um arquivo')
 
     if filename:
         convert_file_to_base64(filename)

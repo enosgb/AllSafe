@@ -6,13 +6,15 @@ from pprint import pprint
 
 # Configure API key authorization: Apikey
 configuration = cloudmersive_virus_api_client.Configuration()
-configuration.api_key['Apikey'] = 'Your Api Key'
+
+# ----- API KEY
+configuration.api_key['Apikey'] = 'your api key'
 
 
 
 # create an instance of the API class
 api_instance = cloudmersive_virus_api_client.ScanApi(cloudmersive_virus_api_client.ApiClient(configuration))
-input_file = 'eicar_com.zip' # file | Input file to perform the operation on.
+input_file = 'C:\\Users\\Enos\\Downloads\\vtex.json' # file | Input file to perform the operation on.
 
 try:
     # Scan a file for viruses

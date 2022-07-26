@@ -1,1 +1,0 @@
-###criando tela de ''fullscan''
