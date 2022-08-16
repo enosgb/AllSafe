@@ -8,7 +8,7 @@ from pprint import pprint
 def scanningWebSite(webUrl):
   # Configure API key authorization: Apikey
   configuration = cloudmersive_virus_api_client.Configuration()
-  configuration.api_key['Apikey'] = '59b1bcd2-0c92-4a90-8c64-26c128639bf0'
+  configuration.api_key['Apikey'] = 'apikey'
   '''
   {
     "Url": "https://secure.eicar.org/eicar.com"
