@@ -1,25 +1,22 @@
+from tokenize import String
 import PySimpleGUI as sg
-import base64
+from api_virus import scanningFile;
+from tela_results_file import results;
 
 ###criando tela de verificação de arquivos
+pathGlobal = ''
 
-def convert_file_to_base64(filename):
-    '''
-    try:
-        contents = open(filename, 'rb').read()
-        encoded = base64.b64encode(contents)
-        sg.clipboard_set(encoded)
-        # pyperclip.copy(str(encoded))
-        sg.popup('Copied to your clipboard!', 'Keep window open until you have pasted the base64 bytestring')
-    except Exception as error:
-        sg.popup_error('Cancelled - An error occurred', error)'''
-    print(filename);
+def selectfile(filename):
+    filepath = filename
+    #filepath =  filepath.replace('/','\\\\')
+    clean = scanningFile(filepath)
+    results(clean,filepath)
 
 def select_arquivos():
     filename = sg.popup_get_file('Selecione um arquivo para Verificação', title='selecione um arquivo')
 
     if filename:
-        convert_file_to_base64(filename)
+        selectfile(filename)
     else:
         sg.popup_cancel('Nenhum arquivo valido foi selecionado')
 
